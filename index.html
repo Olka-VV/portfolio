@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Портфолио — Ольга Венерцева</title>
+<style>
+  :root{
+    --acc:#1F4E5F; --acc2:#2a7d8c; --dark:#1F2933; --muted:#6B7280;
+    --bg:#eef2f3; --card:#ffffff; --line:#e1e7e9; --gold:#b8860b;
+    --ok:#1a6b48;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:'Segoe UI',Roboto,system-ui,Arial,sans-serif;color:var(--dark);
+    background:var(--bg);line-height:1.5;position:relative;overflow-x:hidden;}
+  /* ВОДЯНОЙ ЗНАК */
+  .wm{position:fixed;inset:-60%;width:220%;height:220%;z-index:0;pointer-events:none;
+    transform:rotate(-28deg);opacity:.06;font-weight:800;font-size:40px;color:var(--acc);
+    line-height:2.6;letter-spacing:2px;word-spacing:6px;white-space:normal;overflow:hidden;}
+  .wrap{position:relative;z-index:1;max-width:900px;margin:0 auto;padding:28px 20px 60px;}
+  header.hero{background:linear-gradient(135deg,var(--acc),var(--acc2));color:#fff;border-radius:18px;
+    padding:26px 28px;box-shadow:0 14px 34px -14px rgba(31,78,95,.5);}
+  header.hero h1{margin:0 0 4px;font-size:27px;font-weight:800;}
+  header.hero .role{font-size:15px;opacity:.92;font-weight:600;}
+  header.hero .contacts{margin-top:12px;font-size:13px;opacity:.9;}
+  header.hero .contacts a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.4);}
+  .badge{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);
+    padding:3px 10px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:1px;margin-top:12px;}
+  .disclaimer{background:#fff8e6;border:1px solid #ecd79a;border-radius:12px;padding:12px 16px;
+    margin:18px 0 8px;font-size:12.5px;color:#6b5618;}
+  .disclaimer b{color:#5a4712;}
+  .lead{font-size:13.5px;color:var(--muted);margin:16px 2px 22px;}
+  .case{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--acc);
+    border-radius:14px;padding:18px 20px;margin-bottom:16px;box-shadow:0 6px 18px -12px rgba(31,41,51,.25);}
+  .case h3{margin:0 0 4px;font-size:16.5px;color:var(--acc);}
+  .case .proto{float:right;font-size:9.5px;font-weight:800;letter-spacing:1px;color:#b23;
+    border:1px solid #e3b3b8;background:#fff5f5;border-radius:6px;padding:2px 7px;margin-top:2px;}
+  .case .row{margin:7px 0;font-size:13.5px;}
+  .case .row b{color:var(--dark);}
+  .case .lbl{display:inline-block;min-width:92px;color:var(--muted);font-weight:700;font-size:11.5px;
+    text-transform:uppercase;letter-spacing:.4px;vertical-align:top;}
+  .effect{background:#f1f7f5;border:1px solid #d7e8e1;border-radius:10px;padding:9px 12px;margin-top:8px;font-size:13px;}
+  .effect .e{display:block;margin:3px 0;}
+  .money{color:var(--ok);font-weight:700;}
+  .time{color:var(--acc);font-weight:700;}
+  .stack{margin-top:8px;font-size:11.5px;color:var(--muted);}
+  .stack span{display:inline-block;background:#eef2f3;border:1px solid var(--line);border-radius:14px;
+    padding:2px 9px;margin:2px 4px 2px 0;}
+  footer{margin-top:26px;text-align:center;font-size:12px;color:var(--muted);}
+  @media print{
+    body{background:#fff;} .wm{opacity:.05;position:fixed;}
+    .case,header.hero{box-shadow:none;} .wrap{max-width:none;}
+  }
+</style>
+</head>
+<body>
+<div class="wm" id="wm"></div>
+<div class="wrap">
+
+  <header class="hero">
+    <h1>Портфолио проектов</h1>
+    <div class="role">Ольга Венерцева · Аналитик · маркетинговая аналитика и автоматизация</div>
+    <div class="contacts">
+      +7 903 405-85-70 · <a href="mailto:olka.vv@mail.ru">olka.vv@mail.ru</a> ·
+      Telegram: <a href="https://t.me/Olenka_Venertseva">@Olenka_Venertseva</a> · Ростов-на-Дону
+    </div>
+    <span class="badge">ПРОТОТИП · ДАННЫЕ ОБЕЗЛИЧЕНЫ</span>
+  </header>
+
+  <div class="disclaimer">
+    <b>О конфиденциальности.</b> Все кейсы — демонстрационные прототипы. Название компании и данные
+    клиентов изменены (ООО «Фирма» — производство и опт сантехники и мебели, B2B; Клиент 1, 2, 3…),
+    часть показателей обезличена в целях соблюдения коммерческой тайны. Методологию расчётов и реальные
+    результаты готова показать на собеседовании.
+  </div>
+  <div class="lead">Расчёт высвобожденного времени в деньгах — по ставке ≈ 700 ₽/час.
+    Эффект показан с двух сторон: 💰 что приносит и ⏱️ что экономит.</div>
+
+  <!-- КЕЙСЫ -->
+  <div class="case">
+    <span class="proto">ПРОТОТИП</span>
+    <h3>1. Рост рентабельности через структуру заказа</h3>
+    <div class="row"><span class="lbl">Задача</span> повысить рентабельность продаж за счёт структуры заказа клиентов.</div>
+    <div class="row"><span class="lbl">Что сделано</span> разработала и внедрила структуру заказа для клиентов.</div>
+    <div class="effect"><span class="e">💰 <span class="money">Рентабельность выросла с 32% до 37% (+5 п.п.)</span> после внедрения.</span></div>
+    <div class="stack"><span>Аналитика продаж</span><span>Unit-экономика</span></div>
+  </div>
+
+  <div class="case">
+    <span class="proto">ПРОТОТИП</span>
+    <h3>2. Дашборд «Когортный ROMI»</h3>
+    <div class="row"><span class="lbl">Задача</span> еженедельный отчёт по эффективности маркетинга (когортный ROMI) для руководителя.</div>
+    <div class="row"><span class="lbl">Что сделано</span> перевела отчёт из ручного Excel в наглядный веб-дашборд с диаграммами и прямой интеграцией с CRM и 1С (обновляется автоматически).</div>
+    <div class="effect">
+      <span class="e">⏱️ <span class="time">~200 ч/год (≈ 25 рабочих дней)</span> · 💰 <span class="money">≈ 140 000 ₽/год</span> высвобождено.</span>
+      <span class="e">💰 маркетолог сразу видит прибыльные и убыточные каналы → быстрое перераспределение бюджета.</span>
+    </div>
+    <div class="stack"><span>Веб-дашборд (AI-разработка)</span><span>CRM</span><span>1С</span></div>
+  </div>
+
+  <div class="case">
+    <span class="proto">ПРОТОТИП</span>
+    <h3>3. Автоматизация ежедневного отчёта отдела маркетинга (РНП)</h3>
+    <div class="row"><span class="lbl">Задача</span> ежедневный отчёт отдела маркетинга, 1 час в день вручную.</div>
+    <div class="row"><span class="lbl">Что сделано</span> автоматический сбор и формирование отчёта (интеграция источников).</div>
+    <div class="effect"><span class="e">⏱️ <span class="time">~247 ч/год (≈ 31 рабочий день)</span> · 💰 <span class="money">≈ 173 000 ₽/год</span> высвобождено.</span></div>
+    <div class="stack"><span>Автоматизация</span><span>CRM</span><span>1С</span></div>
+  </div>
+
+  <div class="case">
+    <span class="proto">ПРОТОТИП</span>
+    <h3>4. Калькулятор прибыли партнёра + планировщик торгового зала</h3>
+    <div class="row"><span class="lbl">Задача</span> помочь партнёрам и менеджерам посчитать доход с 1 м² и грамотно расставить товар по фирменным стендам.</div>
+    <div class="row"><span class="lbl">Что сделано</span> спроектировала и реализовала (с применением AI-инструментов) веб-инструмент: калькулятор доходности с 1 м² + 2D-планировщик зала с авто-расстановкой по стендам, учётом проходов и нестандартной формы зала, экспортом в PDF/Excel.</div>
+    <div class="effect">
+      <span class="e">💰 повысил посещаемость сайта; помогает отделу развития и региональным менеджерам — Клиент сразу видит, что куда поставить и сколько заработает → быстрее решение о закупке.</span>
+      <span class="e">⏱️ менеджеры не считают выкладку и доходность вручную.</span>
+    </div>
+    <div class="stack"><span>HTML/JS (AI-разработка)</span><span>Данные 1С / прайс</span></div>
+  </div>
+
+  <div class="case">
+    <span class="proto">ПРОТОТИП</span>
+    <h3>5. Дашборд «География отгрузок»</h3>
+    <div class="row"><span class="lbl">Задача</span> показать руководству, куда и сколько отгружается по партнёрам.</div>
+    <div class="row"><span class="lbl">Что сделано</span> интерактивная карта + дашборд (привязка городов к регионам, динамика отгрузок).</div>
+    <div class="effect"><span class="e">💰 помогает быстро определить, в какой город выехать или с кем связаться, чтобы вернуть и нарастить отгрузки; ⏱️ заменил ручную сборку географии из выгрузок.</span></div>
+    <div class="stack"><span>Веб-дашборд (AI-разработка)</span><span>Карты</span></div>
+  </div>
+
+  <div class="case">
+    <span class="proto">ПРОТОТИП</span>
+    <h3>6. Дашборд «География лидов»</h3>
+    <div class="row"><span class="lbl">Задача</span> свести лидогенерацию в единую картину для маркетинга и продаж.</div>
+    <div class="row"><span class="lbl">Что сделано</span> дашборд: целевые лиды, успешные сделки, выручка в разрезе источника лида и региона, средний чек, ТОП регионов.</div>
+    <div class="effect"><span class="e">💰 видно, какие источники и регионы реально приносят деньги → фокус бюджета на прибыльных каналах; ⏱️ единый дашборд вместо ручных выгрузок.</span></div>
+    <div class="stack"><span>Веб-дашборд (AI-разработка)</span><span>CRM / реклама</span></div>
+  </div>
+
+  <div class="case">
+    <span class="proto">ПРОТОТИП</span>
+    <h3>7. RFM-анализ клиентской базы</h3>
+    <div class="row"><span class="lbl">Задача</span> сегментировать клиентов для адресной работы.</div>
+    <div class="row"><span class="lbl">Что сделано</span> RFM-анализ (давность, частота, сумма покупок) — сегменты от самых ценных до «засыпающих».</div>
+    <div class="effect"><span class="e">💰 выделены ключевые и уходящие клиенты → адресные акции и удержание вместо «ковровых».</span></div>
+    <div class="stack"><span>Excel / анализ данных</span></div>
+  </div>
+
+  <div class="case">
+    <span class="proto">ПРОТОТИП</span>
+    <h3>8. Система расчёта ставок лояльности B2B</h3>
+    <div class="row"><span class="lbl">Задача</span> корректно и прозрачно считать бонусные ставки/мотивацию клиентов по программе лояльности.</div>
+    <div class="row"><span class="lbl">Что сделано</span> система расчёта со справочником ставок, набором тест-кейсов (проверка правильности), журналом решений и единой сборкой результата.</div>
+    <div class="effect"><span class="e">⏱️ расчёт сократился с <span class="time">1,5–2 дней до 1 часа</span> (−90%+); + прозрачность и проверяемость (справочник, тесты, журнал решений).</span></div>
+    <div class="stack"><span>Расчётная система (AI-разработка)</span><span>Тест-кейсы</span></div>
+  </div>
+
+  <footer>Ольга Венерцева · +7 903 405-85-70 · olka.vv@mail.ru · @Olenka_Venertseva · Ростов-на-Дону<br>
+    Демонстрационные прототипы · данные обезличены</footer>
+</div>
+
+<script>
+  // заполняем водяной знак повторяющимся текстом
+  document.getElementById('wm').textContent =
+    ('ПРОТОТИП · ДАННЫЕ ОБЕЗЛИЧЕНЫ · ').repeat(400);
+</script>
+</body>
+</html>
